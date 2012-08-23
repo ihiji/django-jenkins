@@ -15,7 +15,7 @@ cache-size=500
 # W0613 Unused argument %r Used when a function or method argument is not used.
 # W0702 No exception's type specified Used when an except clause doesn't specify exceptions type to catch.
 # R0201 Method could be a function
-disable=C0111,I0011,I0012,W0704,W0142,W0212,W0232,W0613,W0702,R0201
+disable=C0111,I0011,I0012,W0704,W0142,W0212,W0232,W0613,W0702,R0201,W0614,W0401,W0511,W0105,C0302
 
 [REPORTS]
 output-format=parseable
@@ -25,6 +25,8 @@ include-ids=yes
 [BASIC]
 no-docstring-rgx=__.*__|_.*
 class-rgx=[A-Z_][a-zA-Z0-9_]+$
+#Added Variable Length
+variable-rgx=[a-z_][a-z0-9_]{1,30}$
 function-rgx=[a-zA_][a-zA-Z0-9_]{2,70}$
 method-rgx=[a-z_][a-zA-Z0-9_]{2,70}$
 const-rgx=(([A-Z_][A-Z0-9_]*)|([a-z_][a-z0-9_]*)|(__.*__)|register|urlpatterns)$
